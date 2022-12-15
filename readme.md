@@ -48,3 +48,12 @@ $ migrate_zephyr_to_xray_cloud.rb --help
 
 [BSD 3-Clause](LICENSE)
 
+# DOCKER File Execution Commends
+
+Ensure update the JIRA, Xray and Zephur credential are configured on config.yml file 
+
+Run the below docker commands to create image and container  execution. 
+```sh
+docker build -t zephyr2xray .
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app -it zephyr2xray
+```
